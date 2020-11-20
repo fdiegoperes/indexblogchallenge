@@ -1,0 +1,317 @@
+/*
+Theme Name: Indexblogchallenge
+Text Domain: Indexblogchallenge
+Version: 1.0
+Description: This is a Blog Theme created for a challenge proposed by Index company.
+Tags: business, dynamic, responsive
+Author: FDiegoPeres
+Author URI: https://github.com/fdiegoperes/
+*/
+
+:root {
+  --white: #fff;
+  --primary: #137ae7;
+  --gray-dark: #434242;
+  --red: #e72626;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px; 
+  /* Font Sizes */
+  --font-normal: 2em;
+  --font-small: 1rem;
+  /* Sidebar */
+  --sidebar-width: 290px;
+  --content-max-width: 860px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gray-dark);
+  font-weight: bold
+}
+
+.btn {
+  font-weight: bold;
+  padding: .375rem 1rem;
+  height: 2.75rem;
+  transition: all 0.4s ease-in-out
+}
+
+.theme-bg-dark {
+  background: var(--gray-dark) !important
+}
+
+.header {
+  position: fixed;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background: var(--primary);
+  color: #fff;
+}
+.header .site-title {
+  color: var(--white);
+  font-size:1.7em;
+  display:block;
+}
+
+.header .navbar {
+  padding: 3rem 1rem
+}
+
+.header .navbar-dark .navbar-toggler {
+  border: none;
+  padding: .25rem .6rem
+}
+
+.header .navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.header .nav-item a {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 100px 0;
+}
+
+.header .nav-item a:hover {
+  text-decoration: underline;
+  color: rgba(7, 6, 10, 0.9)
+}
+
+.logo{
+  width:50px;
+}
+
+.social-list a {
+  width: 35px;
+  height: 35px;
+  padding-top: 5px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff
+}
+
+.social-list a:hover {
+  color: var(--gray-dark);
+  background-color: rgba(255, 255, 255, 0.9)
+}
+
+.main-wrapper {
+  margin-left: var(--sidebar-width);
+  background: #fff;
+}
+
+.sticky{
+  padding:1em 0 !important;
+}
+
+.page-title .heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color:white;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.9)
+}
+
+.footer a {
+  color: #fff
+}
+
+.gradient{
+  background: rgb(255, 255, 255);
+  background: linear-gradient(151deg, var(--red) 0%,var(--primary) 100%) !important;
+}
+
+.content .post .title {
+  font-size: 1.5rem
+}
+
+.content .post .title a {
+  color: var(--gray-dark)
+}
+
+.content .post .title a:hover {
+  color: var(--gray-dark)
+}
+
+.meta {
+  color: #797474;
+  font-size: var(--font-small);
+}
+
+.meta span {
+  display: inline-block;
+  margin-right:.40em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-list a {
+      transition: none
+  }
+  .btn {
+      transition: none
+  }
+}
+
+@media (min-width: 768px) { }
+
+@media (max-width: 991.98px) {
+  .page-title {
+      position:static;
+  }
+  .header {
+      position: sticky;
+      width: inherit;
+      height: auto
+  }
+
+  .header .site-title {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 1.2rem;
+      color:var(--white);
+      font-size:1.5em;
+      display:block;
+  }
+
+  .header .btn-primary {
+      width: 100%
+  }
+
+  .header .navbar {
+      padding: 1rem
+  }
+
+  .main-wrapper {
+      margin-left: 0
+  }
+}
+
+@media (max-width: 767.98px) { }
+
+/* ## Comments ## */
+/* Headers */
+.comments-wrapper {
+margin-top: 3rem;
+}
+
+.comment-reply-title {
+margin: 0 0 4rem 0;
+text-align: center;
+}
+
+/* Comment Item */
+
+.comments .comment,
+.comments .pingback,
+.comments .trackback,
+.comments .review {
+padding-top: 3.5rem;
+}
+
+div.comment:first-of-type {
+margin-top: 3.5rem;
+padding-top: 0;
+}
+
+.comment .comment {
+padding-left: 5%;
+}
+
+.comment-meta {
+line-height: 1.1;
+margin-bottom: 0;
+min-height: 5rem;
+padding-left: 5rem;
+position: relative;
+}
+
+.comment-meta a {
+color: inherit;
+}
+
+.comment-author {
+font-size: 1.8rem;
+font-weight: 700;
+letter-spacing: -0.027777778em;
+}
+
+.comment-author a {
+text-decoration: underline;
+}
+
+.comment-author a:hover,
+.comment-author a:focus {
+text-decoration: none;
+}
+
+.comment-reply-link {
+background-color: var(--primary);
+border-radius:2px;
+color: #fff;
+display: block;
+padding: 0.7rem;
+}
+
+/* Comment Respond  */
+.comment-respond .comment-notes,
+.comment-respond .logged-in-as {
+color: #6d6d6d;
+font-size: 1.6rem;
+line-height: 1.4;
+margin: -3rem 0 4rem 0;
+text-align: center;
+}
+
+.comment-respond label {
+display: block;
+}
+
+.comment-respond input[type="checkbox"] + label {
+font-size: 1.5rem;
+line-height: 1.25;
+}
+
+.comment-respond textarea {
+height: 15rem;
+width: 100%;
+}
+
+/* Reply Respond */
+.comment-reply-title small {
+display: block;
+font-size: 1.6rem;
+font-weight: 600;
+letter-spacing: -0.0277em;
+margin: 0.5rem 0 0 0;
+white-space: nowrap;
+}
+
+/* Contact */
+
+input[type=submit] {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  color: var(--gray-dark);
+}
+
+.btn-primary {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.col-md-6{
+  margin-right: 0;
+}
